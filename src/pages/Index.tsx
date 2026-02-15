@@ -210,7 +210,7 @@ const Index = () => {
             </h2>
             <ChevronRight className="h-4 w-4 text-muted-foreground" />
           </div>
-          <div className="flex gap-4 overflow-x-auto px-6 pb-2 snap-x snap-mandatory scrollbar-hide" style={{ scrollbarWidth: "none" }}>
+          <div className="flex gap-4 overflow-x-auto px-6 pb-2 snap-x snap-mandatory scrollbar-hide touch-pan-x">
             {featured.map((festival) => (
               <FeaturedCard
                 key={festival.id}
