@@ -14,10 +14,10 @@ import { toast } from "sonner";
 import { format } from "date-fns";
 
 const categories = [
-{ label: "All", icon: Sparkles, gradient: "gradient-festive" },
-{ label: "Religious", icon: Star, gradient: "gradient-royal" },
-{ label: "Cultural", icon: Flame, gradient: "gradient-festive" },
-{ label: "Harvest", icon: CalendarDays, gradient: "gradient-teal" }];
+{ label: "All", icon: Sparkles, gradient: "gradient-primary" },
+{ label: "Religious", icon: Star, gradient: "gradient-festive" },
+{ label: "Cultural", icon: Flame, gradient: "gradient-primary" },
+{ label: "Harvest", icon: CalendarDays, gradient: "gradient-warm" }];
 
 
 const FeaturedCard = ({ festival, onClick, isFav, onToggleFav }: {festival: Festival;onClick: () => void;isFav: boolean;onToggleFav: () => void;}) => {
@@ -49,13 +49,13 @@ const FeaturedCard = ({ festival, onClick, isFav, onToggleFav }: {festival: Fest
           onClick={(e) => {e.stopPropagation();onToggleFav();}}
           className="flex h-9 w-9 items-center justify-center rounded-xl glass-strong">
 
-          <Heart className={`h-4 w-4 transition-colors ${isFav ? "fill-festival-rose text-festival-rose" : "text-primary-foreground/70"}`} />
+          <Heart className={`h-4 w-4 transition-colors ${isFav ? "fill-primary-foreground text-primary-foreground" : "text-primary-foreground/70"}`} />
         </motion.button>
       </div>
 
       <div className="absolute bottom-0 left-0 right-0 p-5">
         {festival.category &&
-        <span className="inline-block rounded-full gradient-gold shimmer px-3 py-0.5 text-[9px] font-extrabold text-foreground uppercase tracking-widest mb-2.5">
+        <span className="inline-block rounded-full gradient-warm shimmer px-3 py-0.5 text-[9px] font-extrabold text-foreground uppercase tracking-widest mb-2.5">
             {festival.category}
           </span>
         }
@@ -63,7 +63,7 @@ const FeaturedCard = ({ festival, onClick, isFav, onToggleFav }: {festival: Fest
           {festival.name}
         </h3>
         <div className="mt-2 flex items-center gap-1.5">
-          <MapPin className="h-3 w-3 text-festival-gold" />
+          <MapPin className="h-3 w-3 text-primary" />
           <span className="text-[11px] text-primary-foreground/80 font-medium font-body">{festival.location}, {festival.province}</span>
         </div>
       </div>
@@ -131,15 +131,17 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background pb-8 relative">
-      {/* Confetti rain */}
-      <ConfettiRain count={20} />
+      {/* Confetti rain - fixed z-index to not block clicks */}
+      <div className="fixed inset-0 z-0 pointer-events-none">
+        <ConfettiRain count={20} />
+      </div>
 
       {/* Hero Header */}
-      <div className="relative overflow-hidden gradient-festive px-6 pb-8 pt-14">
+      <div className="relative z-10 overflow-hidden gradient-primary px-6 pb-8 pt-14">
         {/* Decorative glow orbs */}
-        <div className="absolute -top-20 -right-20 h-60 w-60 rounded-full bg-festival-gold/15 blur-3xl animate-pulse-glow" />
+        <div className="absolute -top-20 -right-20 h-60 w-60 rounded-full bg-primary-foreground/15 blur-3xl animate-pulse-glow" />
         <div className="absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-primary-foreground/8 blur-2xl animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
-        <div className="absolute top-1/2 right-0 h-32 w-32 rounded-full bg-accent/10 blur-2xl animate-pulse-glow" style={{ animationDelay: '3s' }} />
+        <div className="absolute top-1/2 right-0 h-32 w-32 rounded-full bg-primary-foreground/10 blur-2xl animate-pulse-glow" style={{ animationDelay: '3s' }} />
 
         {/* Sparkle dots */}
         {[...Array(8)].map((_, i) =>
@@ -150,7 +152,7 @@ const Index = () => {
             width: 6,
             height: 6,
             borderRadius: "1px",
-            background: "hsl(42 95% 54%)",
+            background: "hsl(18 90% 52%)",
             top: `${15 + Math.random() * 70}%`,
             left: `${5 + Math.random() * 90}%`,
             animationDelay: `${i * 0.3}s`
@@ -172,7 +174,7 @@ const Index = () => {
                 animate={{ rotate: [0, 15, -15, 0] }}
                 transition={{ duration: 2, repeat: Infinity, repeatDelay: 3 }}>
 
-                <Crown className="h-6 w-6 text-festival-gold drop-shadow-md" />
+                <Crown className="h-6 w-6 text-primary-foreground drop-shadow-md" />
               </motion.div>
             </motion.div>
             <motion.p
@@ -221,7 +223,7 @@ const Index = () => {
             transition={{ delay: 0.3 }}
             className="flex items-center gap-2 rounded-2xl bg-primary-foreground/12 backdrop-blur-sm px-4 py-2 border border-primary-foreground/8 flex-shrink-0">
 
-            <div className="h-6 w-6 rounded-lg gradient-gold flex items-center justify-center">
+            <div className="h-6 w-6 rounded-lg gradient-warm flex items-center justify-center">
               <Sparkles className="h-3 w-3 text-foreground" />
             </div>
             <div>
@@ -235,7 +237,7 @@ const Index = () => {
             transition={{ delay: 0.4 }}
             className="flex items-center gap-2 rounded-2xl bg-primary-foreground/12 backdrop-blur-sm px-4 py-2 border border-primary-foreground/8 flex-shrink-0">
 
-            <div className="h-6 w-6 rounded-lg gradient-teal flex items-center justify-center">
+            <div className="h-6 w-6 rounded-lg gradient-primary flex items-center justify-center">
               <TrendingUp className="h-3 w-3 text-primary-foreground" />
             </div>
             <div>
@@ -251,11 +253,11 @@ const Index = () => {
             onClick={() => setShowFavoritesOnly(!showFavoritesOnly)}
             className={`flex items-center gap-2 rounded-2xl backdrop-blur-sm px-4 py-2 border flex-shrink-0 transition-all ${
             showFavoritesOnly ?
-            "bg-festival-rose/25 border-festival-rose/30" :
+            "bg-primary/25 border-primary/30" :
             "bg-primary-foreground/12 border-primary-foreground/8"}`
             }>
 
-            <div className="h-6 w-6 rounded-lg gradient-warm flex items-center justify-center">
+            <div className="h-6 w-6 rounded-lg gradient-festive flex items-center justify-center">
               <Heart className={`h-3 w-3 ${showFavoritesOnly ? "fill-primary-foreground text-primary-foreground" : "text-primary-foreground"}`} />
             </div>
             <div>
@@ -267,14 +269,16 @@ const Index = () => {
       </div>
 
       {/* Feast Banner */}
-      <FeastBanner />
+      <div className="relative z-10">
+        <FeastBanner />
+      </div>
 
       {/* Featured Carousel */}
       {!search && activeCategory === "All" && !showFavoritesOnly && featured.length > 0 &&
-      <div className="mt-6">
+      <div className="mt-6 relative z-10">
           <div className="px-6 mb-4 flex items-center justify-between">
             <h2 className="text-base font-extrabold font-body text-foreground flex items-center gap-2">
-              <div className="h-7 w-7 rounded-lg gradient-warm flex items-center justify-center shadow-festive">
+              <div className="h-7 w-7 rounded-lg gradient-primary flex items-center justify-center shadow-festive">
                 <Flame className="h-3.5 w-3.5 text-primary-foreground" />
               </div>
               Upcoming Fiestas
@@ -299,9 +303,9 @@ const Index = () => {
       }
 
       {/* Categories */}
-      <div className="px-6 py-6">
+      <div className="px-6 py-6 relative z-10">
         <p className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-muted-foreground mb-3.5 flex items-center gap-2">
-          <span className="h-1.5 w-5 rounded-full gradient-festive inline-block" />
+          <span className="h-1.5 w-5 rounded-full gradient-primary inline-block" />
           Browse by Category
         </p>
         <div className="grid grid-cols-4 gap-2.5">
@@ -325,7 +329,7 @@ const Index = () => {
       </div>
 
       {/* Section title */}
-      <div className="px-6 mb-4 flex items-center justify-between">
+      <div className="px-6 mb-4 flex items-center justify-between relative z-10">
         <h2 className="text-lg font-extrabold font-body text-foreground">
           {showFavoritesOnly ? "My Favorites ❤️" : activeCategory === "All" ? "All Festivals" : `${activeCategory} Festivals`}
         </h2>
@@ -333,7 +337,7 @@ const Index = () => {
       </div>
 
       {/* Festival Grid */}
-      <div className="px-6">
+      <div className="px-6 relative z-10">
         {loading ?
         <div className="flex flex-col gap-4">
             {[1, 2, 3].map((i) =>

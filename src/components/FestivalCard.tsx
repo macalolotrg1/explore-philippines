@@ -25,10 +25,10 @@ interface FestivalCardProps {
 }
 
 const categoryColors: Record<string, string> = {
-  religious: "bg-festival-indigo/15 text-festival-indigo border border-festival-indigo/20",
-  cultural: "bg-festival-magenta/15 text-festival-magenta border border-festival-magenta/20",
-  harvest: "bg-festival-teal/15 text-festival-teal border border-festival-teal/20",
-  festival: "bg-festival-gold/15 text-festival-gold border border-festival-gold/20",
+  religious: "bg-primary/15 text-primary border border-primary/20",
+  cultural: "bg-primary/10 text-primary border border-primary/15",
+  harvest: "bg-primary/15 text-primary border border-primary/20",
+  festival: "bg-primary/15 text-primary border border-primary/20",
 };
 
 const FestivalCard = ({ festival, index, onClick, isFavorite = false, onToggleFavorite }: FestivalCardProps) => {
@@ -93,7 +93,7 @@ const FestivalCard = ({ festival, index, onClick, isFavorite = false, onToggleFa
                   onClick={(e) => { e.stopPropagation(); onToggleFavorite(); }}
                   className="ml-2 flex-shrink-0 mt-1"
                 >
-                  <Heart className={`h-4.5 w-4.5 transition-all ${isFavorite ? "fill-festival-rose text-festival-rose scale-110" : "text-muted-foreground/40 hover:text-festival-rose/60"}`} />
+                  <Heart className={`h-4.5 w-4.5 transition-all ${isFavorite ? "fill-primary text-primary scale-110" : "text-muted-foreground/40 hover:text-primary/60"}`} />
                 </motion.button>
               )}
             </div>
@@ -106,7 +106,7 @@ const FestivalCard = ({ festival, index, onClick, isFavorite = false, onToggleFa
             </div>
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-1.5 text-[11px] text-muted-foreground">
-                <Calendar className="h-3 w-3 text-secondary flex-shrink-0" />
+                <Calendar className="h-3 w-3 text-primary flex-shrink-0" />
                 <span>{dateLabel}</span>
               </div>
               <div className="h-6 w-6 rounded-full bg-primary/10 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-all duration-300">
