@@ -48,17 +48,18 @@
     --font-display: 'Dancing Script', cursive;
     --font-body: 'Poppins', sans-serif;
 
-    --gradient-festive: linear-gradient(135deg, hsl(18 90% 52%), hsl(338 80% 52%), hsl(252 65% 50%));
-    --gradient-warm: linear-gradient(135deg, hsl(42 95% 54%), hsl(18 90% 52%));
-    --gradient-teal: linear-gradient(135deg, hsl(168 70% 34%), hsl(188 75% 40%));
-    --gradient-gold: linear-gradient(135deg, hsl(42 95% 54%), hsl(28 100% 62%));
-    --gradient-royal: linear-gradient(135deg, hsl(252 65% 50%), hsl(338 80% 52%));
-    --gradient-sunset: linear-gradient(180deg, hsl(18 90% 52% / 0.9), hsl(338 80% 52% / 0.8), hsl(252 65% 50% / 0.7));
-    --gradient-feast: linear-gradient(135deg, hsl(42 95% 54%), hsl(18 90% 52%), hsl(338 80% 52%), hsl(252 65% 50%));
-    --shadow-festive: 0 8px 32px -8px hsl(18 90% 52% / 0.35);
-    --shadow-card: 0 2px 12px -2px hsl(220 30% 12% / 0.06);
-    --shadow-glow: 0 0 40px -8px hsl(42 95% 54% / 0.3);
-    --shadow-elevated: 0 12px 40px -12px hsl(220 30% 12% / 0.15);
+    --gradient-primary: linear-gradient(135deg, hsl(18 90% 52%), hsl(12 85% 42%));
+    --gradient-festive: linear-gradient(135deg, hsl(18 90% 52%), hsl(24 95% 46%), hsl(8 80% 44%));
+    --gradient-warm: linear-gradient(135deg, hsl(28 100% 58%), hsl(18 90% 52%));
+    --gradient-teal: linear-gradient(135deg, hsl(18 80% 48%), hsl(22 90% 56%));
+    --gradient-gold: linear-gradient(135deg, hsl(28 100% 58%), hsl(18 90% 52%));
+    --gradient-royal: linear-gradient(135deg, hsl(12 85% 42%), hsl(18 90% 52%));
+    --gradient-sunset: linear-gradient(180deg, hsl(18 90% 52% / 0.95), hsl(12 85% 42% / 0.85));
+    --gradient-feast: linear-gradient(135deg, hsl(28 100% 58%), hsl(18 90% 52%), hsl(12 85% 42%), hsl(8 80% 38%));
+    --shadow-festive: 0 8px 32px -8px hsl(18 90% 52% / 0.4);
+    --shadow-card: 0 2px 12px -2px hsl(18 90% 52% / 0.08);
+    --shadow-glow: 0 0 40px -8px hsl(18 90% 52% / 0.35);
+    --shadow-elevated: 0 12px 40px -12px hsl(18 90% 52% / 0.18);
 
     --sidebar-background: 0 0% 98%;
     --sidebar-foreground: 240 5.3% 26.1%;
@@ -123,6 +124,10 @@
 @layer utilities {
   .font-display {
     font-family: var(--font-display);
+  }
+
+  .gradient-primary {
+    background: var(--gradient-primary);
   }
 
   .gradient-festive {
