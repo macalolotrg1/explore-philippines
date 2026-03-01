@@ -58,7 +58,7 @@ const FestivalDetail = ({ festival, onClose, isFavorite = false, onToggleFavorit
                 onClick={onToggleFavorite}
                 className="flex h-11 w-11 items-center justify-center rounded-2xl glass-strong shadow-elevated"
               >
-                <Heart className={`h-4.5 w-4.5 transition-all ${isFavorite ? "fill-festival-rose text-festival-rose" : "text-foreground"}`} />
+                <Heart className={`h-4.5 w-4.5 transition-all ${isFavorite ? "fill-primary text-primary" : "text-foreground"}`} />
               </motion.button>
               <motion.button
                 whileTap={{ scale: 0.9 }}
@@ -74,7 +74,7 @@ const FestivalDetail = ({ festival, onClose, isFavorite = false, onToggleFavorit
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 0.3, type: "spring" }}
-            className="absolute -bottom-7 right-6 flex flex-col items-center rounded-2xl gradient-festive px-5 py-3.5 shadow-festive shimmer overflow-hidden"
+            className="absolute -bottom-7 right-6 flex flex-col items-center rounded-2xl gradient-red px-5 py-3.5 shadow-festive shimmer overflow-hidden"
           >
             <span className="text-[9px] font-extrabold text-primary-foreground/70 uppercase tracking-[0.2em] relative z-10">{month}</span>
             <span className="text-3xl font-black text-primary-foreground leading-tight relative z-10">{day}</span>
@@ -97,7 +97,7 @@ const FestivalDetail = ({ festival, onClose, isFavorite = false, onToggleFavorit
 
             <div className="mt-5 flex flex-col gap-3.5">
               <div className="flex items-center gap-3.5">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl gradient-warm shadow-sm">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl gradient-yellow shadow-sm">
                   <MapPin className="h-4.5 w-4.5 text-primary-foreground" />
                 </div>
                 <div>
@@ -106,7 +106,7 @@ const FestivalDetail = ({ festival, onClose, isFavorite = false, onToggleFavorit
                 </div>
               </div>
               <div className="flex items-center gap-3.5">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl gradient-teal shadow-sm">
+                <div className="flex h-10 w-10 items-center justify-center rounded-xl gradient-blue shadow-sm">
                   <Calendar className="h-4.5 w-4.5 text-primary-foreground" />
                 </div>
                 <p className="text-sm font-semibold text-foreground">{dateLabel}</p>
@@ -118,7 +118,7 @@ const FestivalDetail = ({ festival, onClose, isFavorite = false, onToggleFavorit
 
             <div>
               <h2 className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-muted-foreground flex items-center gap-2">
-                <span className="h-1.5 w-5 rounded-full gradient-festive inline-block" />
+                <span className="h-1.5 w-5 rounded-full gradient-red inline-block" />
                 About this Festival
               </h2>
               <p className="mt-3.5 text-[15px] leading-[1.8] text-foreground/75 text-justify font-body">{festival.description}</p>
@@ -127,7 +127,7 @@ const FestivalDetail = ({ festival, onClose, isFavorite = false, onToggleFavorit
             {festival.highlights && festival.highlights.length > 0 && (
               <div className="mt-7">
                 <h2 className="text-[10px] font-extrabold uppercase tracking-[0.2em] text-muted-foreground flex items-center gap-2">
-                  <span className="h-1.5 w-5 rounded-full gradient-gold inline-block" />
+                  <span className="h-1.5 w-5 rounded-full gradient-yellow inline-block" />
                   Highlights
                 </h2>
                 <div className="mt-3.5 flex flex-wrap gap-2.5">
@@ -138,7 +138,7 @@ const FestivalDetail = ({ festival, onClose, isFavorite = false, onToggleFavorit
                       animate={{ opacity: 1, scale: 1 }}
                       className="flex items-center gap-1.5 rounded-2xl glass border border-primary/10 px-4 py-2.5 text-sm font-medium text-foreground"
                     >
-                      <Sparkles className="h-3 w-3 text-festival-gold" />
+                      <Sparkles className="h-3 w-3 text-secondary" />
                       {h}
                     </motion.span>
                   ))}

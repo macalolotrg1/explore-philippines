@@ -25,9 +25,9 @@ interface FestivalCardProps {
 }
 
 const categoryColors: Record<string, string> = {
-  religious: "bg-primary/15 text-primary border border-primary/20",
-  cultural: "bg-primary/10 text-primary border border-primary/15",
-  harvest: "bg-primary/15 text-primary border border-primary/20",
+  religious: "bg-accent/15 text-accent border border-accent/20",
+  cultural: "bg-primary/15 text-primary border border-primary/20",
+  harvest: "bg-secondary/15 text-secondary-foreground border border-secondary/20",
   festival: "bg-primary/15 text-primary border border-primary/20",
 };
 
@@ -65,7 +65,7 @@ const FestivalCard = ({ festival, index, onClick, isFavorite = false, onToggleFa
           />
           <div className="absolute inset-0 bg-gradient-to-r from-transparent to-card/10" />
           {/* Date badge */}
-          <div className="absolute top-2 left-2 flex flex-col items-center rounded-xl gradient-festive px-2.5 py-1.5 shadow-festive">
+          <div className="absolute top-2 left-2 flex flex-col items-center rounded-xl gradient-red px-2.5 py-1.5 shadow-festive">
             <span className="text-[8px] font-extrabold text-primary-foreground/80 uppercase leading-none tracking-widest">{month}</span>
             <span className="text-lg font-black text-primary-foreground leading-tight">{day}</span>
           </div>

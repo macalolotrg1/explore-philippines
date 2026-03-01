@@ -14,10 +14,10 @@ import { toast } from "sonner";
 import { format } from "date-fns";
 
 const categories = [
-{ label: "All", icon: Sparkles, gradient: "gradient-primary" },
-{ label: "Religious", icon: Star, gradient: "gradient-festive" },
-{ label: "Cultural", icon: Flame, gradient: "gradient-primary" },
-{ label: "Harvest", icon: CalendarDays, gradient: "gradient-warm" }];
+{ label: "All", icon: Sparkles, gradient: "gradient-festive" },
+{ label: "Religious", icon: Star, gradient: "gradient-blue" },
+{ label: "Cultural", icon: Flame, gradient: "gradient-red" },
+{ label: "Harvest", icon: CalendarDays, gradient: "gradient-yellow" }];
 
 
 const FeaturedCard = ({ festival, onClick, isFav, onToggleFav }: {festival: Festival;onClick: () => void;isFav: boolean;onToggleFav: () => void;}) => {
@@ -137,10 +137,10 @@ const Index = () => {
       </div>
 
       {/* Hero Header */}
-      <div className="relative z-10 overflow-hidden gradient-primary px-6 pb-8 pt-14">
+      <div className="relative z-10 overflow-hidden gradient-red px-6 pb-8 pt-14">
         {/* Decorative glow orbs */}
-        <div className="absolute -top-20 -right-20 h-60 w-60 rounded-full bg-primary-foreground/15 blur-3xl animate-pulse-glow" />
-        <div className="absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-primary-foreground/8 blur-2xl animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
+        <div className="absolute -top-20 -right-20 h-60 w-60 rounded-full bg-secondary/20 blur-3xl animate-pulse-glow" />
+        <div className="absolute -bottom-16 -left-16 h-48 w-48 rounded-full bg-accent/15 blur-2xl animate-pulse-glow" style={{ animationDelay: '1.5s' }} />
         <div className="absolute top-1/2 right-0 h-32 w-32 rounded-full bg-primary-foreground/10 blur-2xl animate-pulse-glow" style={{ animationDelay: '3s' }} />
 
         {/* Sparkle dots */}
@@ -152,7 +152,7 @@ const Index = () => {
             width: 6,
             height: 6,
             borderRadius: "1px",
-            background: "hsl(18 90% 52%)",
+            background: ["hsl(0 80% 50%)", "hsl(50 100% 50%)", "hsl(220 80% 50%)"][i % 3],
             top: `${15 + Math.random() * 70}%`,
             left: `${5 + Math.random() * 90}%`,
             animationDelay: `${i * 0.3}s`
@@ -223,7 +223,7 @@ const Index = () => {
             transition={{ delay: 0.3 }}
             className="flex items-center gap-2 rounded-2xl bg-primary-foreground/12 backdrop-blur-sm px-4 py-2 border border-primary-foreground/8 flex-shrink-0">
 
-            <div className="h-6 w-6 rounded-lg gradient-warm flex items-center justify-center">
+            <div className="h-6 w-6 rounded-lg gradient-yellow flex items-center justify-center">
               <Sparkles className="h-3 w-3 text-foreground" />
             </div>
             <div>
@@ -237,7 +237,7 @@ const Index = () => {
             transition={{ delay: 0.4 }}
             className="flex items-center gap-2 rounded-2xl bg-primary-foreground/12 backdrop-blur-sm px-4 py-2 border border-primary-foreground/8 flex-shrink-0">
 
-            <div className="h-6 w-6 rounded-lg gradient-primary flex items-center justify-center">
+            <div className="h-6 w-6 rounded-lg gradient-blue flex items-center justify-center">
               <TrendingUp className="h-3 w-3 text-primary-foreground" />
             </div>
             <div>
@@ -257,7 +257,7 @@ const Index = () => {
             "bg-primary-foreground/12 border-primary-foreground/8"}`
             }>
 
-            <div className="h-6 w-6 rounded-lg gradient-festive flex items-center justify-center">
+            <div className="h-6 w-6 rounded-lg gradient-red flex items-center justify-center">
               <Heart className={`h-3 w-3 ${showFavoritesOnly ? "fill-primary-foreground text-primary-foreground" : "text-primary-foreground"}`} />
             </div>
             <div>
@@ -278,7 +278,7 @@ const Index = () => {
       <div className="mt-6 relative z-10">
           <div className="px-6 mb-4 flex items-center justify-between">
             <h2 className="text-base font-extrabold font-body text-foreground flex items-center gap-2">
-              <div className="h-7 w-7 rounded-lg gradient-primary flex items-center justify-center shadow-festive">
+              <div className="h-7 w-7 rounded-lg gradient-red flex items-center justify-center shadow-festive">
                 <Flame className="h-3.5 w-3.5 text-primary-foreground" />
               </div>
               Upcoming Fiestas
