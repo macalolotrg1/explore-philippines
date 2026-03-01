@@ -11,9 +11,9 @@ interface CalendarViewProps {
 }
 
 const MONTH_COLORS = [
-  "gradient-festive", "gradient-royal", "gradient-warm", "gradient-teal",
-  "gradient-gold", "gradient-festive", "gradient-royal", "gradient-warm",
-  "gradient-teal", "gradient-gold", "gradient-festive", "gradient-royal",
+  "gradient-red", "gradient-blue", "gradient-yellow", "gradient-red",
+  "gradient-blue", "gradient-yellow", "gradient-red", "gradient-blue",
+  "gradient-yellow", "gradient-red", "gradient-blue", "gradient-yellow",
 ];
 
 const CalendarView = ({ festivals, onBack, onSelectFestival }: CalendarViewProps) => {
@@ -116,7 +116,7 @@ const CalendarView = ({ festivals, onBack, onSelectFestival }: CalendarViewProps
               >
                 <span className="relative z-10">{day}</span>
                 {hasFestival && festivalsByDay[day].length > 1 && (
-                  <span className="absolute -top-0.5 -right-0.5 h-4 w-4 rounded-full bg-festival-gold text-[8px] font-black text-foreground flex items-center justify-center z-10">
+                  <span className="absolute -top-0.5 -right-0.5 h-4 w-4 rounded-full bg-secondary text-[8px] font-black text-secondary-foreground flex items-center justify-center z-10">
                     {festivalsByDay[day].length}
                   </span>
                 )}
@@ -167,7 +167,7 @@ const CalendarView = ({ festivals, onBack, onSelectFestival }: CalendarViewProps
                     <span className="truncate">{festival.location}, {festival.province}</span>
                   </div>
                 </div>
-                <Sparkles className="h-4 w-4 text-festival-gold opacity-0 group-hover:opacity-100 transition-opacity" />
+                <Sparkles className="h-4 w-4 text-secondary opacity-0 group-hover:opacity-100 transition-opacity" />
               </motion.div>
             ))
           )}

@@ -64,11 +64,11 @@ const AuthPage = () => {
           width: Math.random() * 7 + 3,
           height: Math.random() * 7 + 3,
           background: [
-          "hsl(18 90% 52%)",
-          "hsl(42 95% 54%)",
-          "hsl(338 80% 52%)",
-          "hsl(168 70% 34%)",
-          "hsl(252 65% 50%)"][
+          "hsl(0 80% 50%)",
+          "hsl(50 100% 50%)",
+          "hsl(220 80% 50%)",
+          "hsl(0 85% 62%)",
+          "hsl(220 75% 62%)"][
           i % 5],
           top: `${5 + Math.random() * 35}%`,
           left: `${10 + Math.random() * 80}%`
@@ -104,9 +104,9 @@ const AuthPage = () => {
 
         <h1 className="font-display text-6xl font-bold text-primary drop-shadow-md">SeekLakaw</h1>
         <p className="mt-2.5 flex items-center justify-center gap-1.5 text-sm text-muted-foreground font-body">
-          <Sparkles className="h-3.5 w-3.5 text-festival-gold" />
+          <Sparkles className="h-3.5 w-3.5 text-secondary" />
           <span className="tracking-wide">Discover Philippine Festivals</span>
-          <Sparkles className="h-3.5 w-3.5 text-festival-gold" />
+          <Sparkles className="h-3.5 w-3.5 text-secondary" />
         </p>
       </motion.div>
 
