@@ -64,11 +64,11 @@ const AuthPage = () => {
           width: Math.random() * 7 + 3,
           height: Math.random() * 7 + 3,
           background: [
-          "hsl(0 80% 50%)",
-          "hsl(50 100% 50%)",
-          "hsl(220 80% 50%)",
-          "hsl(0 85% 62%)",
-          "hsl(220 75% 62%)"][
+          "hsl(340 65% 65%)",
+          "hsl(350 55% 78%)",
+          "hsl(330 50% 72%)",
+          "hsl(340 60% 75%)",
+          "hsl(345 50% 82%)"][
           i % 5],
           top: `${5 + Math.random() * 35}%`,
           left: `${10 + Math.random() * 80}%`
