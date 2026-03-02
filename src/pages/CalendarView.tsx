@@ -11,9 +11,9 @@ interface CalendarViewProps {
 }
 
 const MONTH_COLORS = [
-  "gradient-red", "gradient-blue", "gradient-yellow", "gradient-red",
-  "gradient-blue", "gradient-yellow", "gradient-red", "gradient-blue",
-  "gradient-yellow", "gradient-red", "gradient-blue", "gradient-yellow",
+  "gradient-primary", "gradient-warm", "gradient-teal", "gradient-primary",
+  "gradient-warm", "gradient-teal", "gradient-primary", "gradient-warm",
+  "gradient-teal", "gradient-primary", "gradient-warm", "gradient-teal",
 ];
 
 const CalendarView = ({ festivals, onBack, onSelectFestival }: CalendarViewProps) => {

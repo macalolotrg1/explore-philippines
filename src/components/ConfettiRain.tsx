@@ -2,14 +2,14 @@ import { motion } from "framer-motion";
 import { useMemo } from "react";
 
 const CONFETTI_COLORS = [
-  "hsl(0 80% 50%)",    // red
-  "hsl(50 100% 50%)",  // yellow
-  "hsl(220 80% 50%)",  // blue
-  "hsl(0 85% 62%)",    // light red
-  "hsl(48 100% 60%)",  // light yellow
-  "hsl(220 75% 62%)",  // light blue
-  "hsl(0 0% 100%)",    // white
-  "hsl(50 100% 45%)",  // deep yellow
+  "hsl(340 65% 65%)",   // soft pink
+  "hsl(350 55% 78%)",   // light rose
+  "hsl(330 50% 72%)",   // mauve pink
+  "hsl(340 60% 75%)",   // blush
+  "hsl(345 50% 82%)",   // pale pink
+  "hsl(0 0% 100%)",     // white
+  "hsl(350 45% 85%)",   // pastel pink
+  "hsl(335 55% 68%)",   // medium pink
 ];
 
 const SHAPES = ["rounded-full", "rounded-sm", "rounded-none rotate-45"];

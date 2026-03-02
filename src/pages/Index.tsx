@@ -152,7 +152,7 @@ const Index = () => {
             width: 6,
             height: 6,
             borderRadius: "1px",
-            background: ["hsl(0 80% 50%)", "hsl(50 100% 50%)", "hsl(220 80% 50%)"][i % 3],
+            background: ["hsl(340 65% 65%)", "hsl(350 55% 78%)", "hsl(330 50% 72%)"][i % 3],
             top: `${15 + Math.random() * 70}%`,
             left: `${5 + Math.random() * 90}%`,
             animationDelay: `${i * 0.3}s`
