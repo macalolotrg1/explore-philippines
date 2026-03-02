@@ -74,15 +74,15 @@ const FestivalDetail = ({ festival, onClose, isFavorite = false, onToggleFavorit
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             transition={{ delay: 0.3, type: "spring" }}
-            className="absolute -bottom-7 right-6 flex flex-col items-center rounded-2xl gradient-red px-5 py-3.5 shadow-festive shimmer overflow-hidden"
+            className="absolute -bottom-6 right-5 flex flex-col items-center rounded-2xl gradient-red px-4 py-2.5 shadow-festive shimmer overflow-hidden"
           >
-            <span className="text-[9px] font-extrabold text-primary-foreground/70 uppercase tracking-[0.2em] relative z-10">{month}</span>
-            <span className="text-3xl font-black text-primary-foreground leading-tight relative z-10">{day}</span>
+            <span className="text-[8px] font-extrabold text-primary-foreground/70 uppercase tracking-[0.15em] relative z-10">{month}</span>
+            <span className="text-2xl font-black text-primary-foreground leading-tight relative z-10">{day}</span>
           </motion.div>
         </div>
 
         {/* Content */}
-        <div className="px-6 pb-12 pt-5 relative z-10">
+        <div className="px-5 pb-12 pt-4 relative z-10">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -93,21 +93,21 @@ const FestivalDetail = ({ festival, onClose, isFavorite = false, onToggleFavorit
                 {festival.category}
               </span>
             )}
-            <h1 className="text-2xl font-extrabold font-body text-foreground leading-tight">{festival.name}</h1>
+            <h1 className="text-xl font-extrabold font-body text-foreground leading-tight pr-16">{festival.name}</h1>
 
-            <div className="mt-5 flex flex-col gap-3.5">
-              <div className="flex items-center gap-3.5">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl gradient-yellow shadow-sm">
-                  <MapPin className="h-4.5 w-4.5 text-primary-foreground" />
+            <div className="mt-4 flex flex-col gap-3">
+              <div className="flex items-center gap-3">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl gradient-yellow shadow-sm">
+                  <MapPin className="h-4 w-4 text-primary-foreground" />
                 </div>
-                <div>
-                  <p className="text-sm font-semibold text-foreground">{festival.location}, {festival.province}</p>
+                <div className="min-w-0">
+                  <p className="text-sm font-semibold text-foreground truncate">{festival.location}, {festival.province}</p>
                   <p className="text-xs text-muted-foreground">{festival.region}</p>
                 </div>
               </div>
-              <div className="flex items-center gap-3.5">
-                <div className="flex h-10 w-10 items-center justify-center rounded-xl gradient-blue shadow-sm">
-                  <Calendar className="h-4.5 w-4.5 text-primary-foreground" />
+              <div className="flex items-center gap-3">
+                <div className="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl gradient-blue shadow-sm">
+                  <Calendar className="h-4 w-4 text-primary-foreground" />
                 </div>
                 <p className="text-sm font-semibold text-foreground">{dateLabel}</p>
               </div>

@@ -15,16 +15,16 @@
     --popover: 0 0% 100%;
     --popover-foreground: 340 20% 15%;
 
-    --primary: 340 65% 65%;
+    --primary: 340 72% 52%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 350 55% 78%;
-    --secondary-foreground: 340 40% 20%;
+    --secondary: 348 60% 68%;
+    --secondary-foreground: 340 40% 15%;
 
-    --muted: 340 15% 93%;
-    --muted-foreground: 340 10% 46%;
+    --muted: 340 18% 92%;
+    --muted-foreground: 340 12% 42%;
 
-    --accent: 330 50% 72%;
+    --accent: 328 55% 58%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84% 60%;
@@ -32,43 +32,43 @@
 
     --border: 340 15% 90%;
     --input: 340 15% 90%;
-    --ring: 340 65% 65%;
+    --ring: 340 72% 52%;
 
     --radius: 0.875rem;
 
-    --festival-red: 340 65% 65%;
-    --festival-red-light: 340 60% 75%;
-    --festival-yellow: 350 55% 78%;
-    --festival-yellow-light: 350 50% 82%;
-    --festival-blue: 330 50% 72%;
-    --festival-blue-light: 330 45% 78%;
-    --festival-gold: 350 55% 78%;
-    --festival-gold-foreground: 340 20% 15%;
-    --festival-teal: 330 50% 72%;
-    --festival-magenta: 340 65% 65%;
-    --festival-indigo: 330 50% 72%;
-    --festival-warm: 350 55% 78%;
-    --festival-rose: 340 65% 65%;
-    --festival-amber: 350 55% 78%;
+    --festival-red: 340 72% 52%;
+    --festival-red-light: 340 65% 65%;
+    --festival-yellow: 348 60% 68%;
+    --festival-yellow-light: 348 55% 75%;
+    --festival-blue: 328 55% 58%;
+    --festival-blue-light: 328 50% 68%;
+    --festival-gold: 348 60% 68%;
+    --festival-gold-foreground: 340 20% 12%;
+    --festival-teal: 328 55% 58%;
+    --festival-magenta: 340 72% 52%;
+    --festival-indigo: 328 55% 58%;
+    --festival-warm: 348 60% 68%;
+    --festival-rose: 340 72% 52%;
+    --festival-amber: 348 60% 68%;
 
     --font-display: 'Dancing Script', cursive;
     --font-body: 'Poppins', sans-serif;
 
-    --gradient-red: linear-gradient(135deg, hsl(340 65% 65%), hsl(350 60% 58%));
-    --gradient-yellow: linear-gradient(135deg, hsl(350 55% 78%), hsl(345 50% 72%));
-    --gradient-blue: linear-gradient(135deg, hsl(330 50% 72%), hsl(325 45% 65%));
-    --gradient-primary: linear-gradient(135deg, hsl(340 65% 65%), hsl(350 60% 58%));
-    --gradient-festive: linear-gradient(135deg, hsl(340 65% 65%), hsl(350 55% 78%), hsl(330 50% 72%));
-    --gradient-warm: linear-gradient(135deg, hsl(350 55% 78%), hsl(345 50% 72%));
-    --gradient-teal: linear-gradient(135deg, hsl(330 50% 72%), hsl(325 45% 78%));
-    --gradient-gold: linear-gradient(135deg, hsl(350 55% 78%), hsl(340 50% 70%));
-    --gradient-royal: linear-gradient(135deg, hsl(330 50% 72%), hsl(320 45% 60%));
-    --gradient-sunset: linear-gradient(180deg, hsl(340 65% 65% / 0.95), hsl(350 55% 78% / 0.85));
-    --gradient-feast: linear-gradient(135deg, hsl(340 65% 65%), hsl(350 55% 78%), hsl(330 50% 72%));
-    --shadow-festive: 0 8px 32px -8px hsl(340 65% 65% / 0.35);
-    --shadow-card: 0 2px 12px -2px hsl(340 20% 15% / 0.08);
-    --shadow-glow: 0 0 40px -8px hsl(340 65% 65% / 0.2);
-    --shadow-elevated: 0 12px 40px -12px hsl(340 20% 15% / 0.12);
+    --gradient-red: linear-gradient(135deg, hsl(340 72% 52%), hsl(348 68% 46%));
+    --gradient-yellow: linear-gradient(135deg, hsl(348 60% 68%), hsl(342 55% 60%));
+    --gradient-blue: linear-gradient(135deg, hsl(328 55% 58%), hsl(322 50% 50%));
+    --gradient-primary: linear-gradient(135deg, hsl(340 72% 52%), hsl(348 68% 46%));
+    --gradient-festive: linear-gradient(135deg, hsl(340 72% 52%), hsl(348 60% 68%), hsl(328 55% 58%));
+    --gradient-warm: linear-gradient(135deg, hsl(348 60% 68%), hsl(342 55% 60%));
+    --gradient-teal: linear-gradient(135deg, hsl(328 55% 58%), hsl(322 50% 65%));
+    --gradient-gold: linear-gradient(135deg, hsl(348 60% 68%), hsl(340 55% 58%));
+    --gradient-royal: linear-gradient(135deg, hsl(328 55% 58%), hsl(318 50% 48%));
+    --gradient-sunset: linear-gradient(180deg, hsl(340 72% 52% / 0.95), hsl(348 60% 68% / 0.85));
+    --gradient-feast: linear-gradient(135deg, hsl(340 72% 52%), hsl(348 60% 68%), hsl(328 55% 58%));
+    --shadow-festive: 0 8px 32px -8px hsl(340 72% 52% / 0.4);
+    --shadow-card: 0 2px 12px -2px hsl(340 20% 12% / 0.1);
+    --shadow-glow: 0 0 40px -8px hsl(340 72% 52% / 0.25);
+    --shadow-elevated: 0 12px 40px -12px hsl(340 20% 12% / 0.15);
 
     --sidebar-background: 340 20% 98%;
     --sidebar-foreground: 340 10% 26%;
