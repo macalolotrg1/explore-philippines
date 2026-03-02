@@ -215,55 +215,49 @@ const Index = () => {
 
         </div>
 
-        {/* Stats pills */}
-        <div className="relative z-10 mt-5 flex gap-2.5 overflow-x-auto scrollbar-hide">
-          <motion.div
+        {/* Stats pills - mobile optimized grid */}
+        <div className="relative z-10 mt-5 grid grid-cols-3 gap-2">
+          <motion.button
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
-            className="flex items-center gap-2 rounded-2xl bg-primary-foreground/12 backdrop-blur-sm px-4 py-2 border border-primary-foreground/8 flex-shrink-0">
-
-            <div className="h-6 w-6 rounded-lg gradient-yellow flex items-center justify-center">
-              <Sparkles className="h-3 w-3 text-foreground" />
+            whileTap={{ scale: 0.95 }}
+            onClick={() => { setShowFavoritesOnly(false); setActiveCategory("All"); setSearch(""); }}
+            className="flex flex-col items-center gap-1 rounded-2xl bg-primary-foreground/15 backdrop-blur-sm px-3 py-3 border border-primary-foreground/10 active:bg-primary-foreground/25 transition-all">
+            <div className="h-8 w-8 rounded-xl gradient-yellow flex items-center justify-center shadow-sm">
+              <Sparkles className="h-4 w-4 text-primary-foreground" />
             </div>
-            <div>
-              <span className="text-[13px] font-bold text-primary-foreground">{festivals.length}</span>
-              <span className="text-[11px] text-primary-foreground/60 ml-1">Festivals</span>
-            </div>
-          </motion.div>
-          <motion.div
+            <span className="text-lg font-extrabold text-primary-foreground leading-none">{festivals.length}</span>
+            <span className="text-[10px] text-primary-foreground/60 font-semibold">Festivals</span>
+          </motion.button>
+          <motion.button
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
-            className="flex items-center gap-2 rounded-2xl bg-primary-foreground/12 backdrop-blur-sm px-4 py-2 border border-primary-foreground/8 flex-shrink-0">
-
-            <div className="h-6 w-6 rounded-lg gradient-blue flex items-center justify-center">
-              <TrendingUp className="h-3 w-3 text-primary-foreground" />
+            whileTap={{ scale: 0.95 }}
+            onClick={() => { setShowFavoritesOnly(false); setActiveCategory("All"); setSearch(""); }}
+            className="flex flex-col items-center gap-1 rounded-2xl bg-primary-foreground/15 backdrop-blur-sm px-3 py-3 border border-primary-foreground/10 active:bg-primary-foreground/25 transition-all">
+            <div className="h-8 w-8 rounded-xl gradient-blue flex items-center justify-center shadow-sm">
+              <TrendingUp className="h-4 w-4 text-primary-foreground" />
             </div>
-            <div>
-              <span className="text-[13px] font-bold text-primary-foreground">{upcomingCount}</span>
-              <span className="text-[11px] text-primary-foreground/60 ml-1">Upcoming</span>
-            </div>
-          </motion.div>
+            <span className="text-lg font-extrabold text-primary-foreground leading-none">{upcomingCount}</span>
+            <span className="text-[10px] text-primary-foreground/60 font-semibold">Upcoming</span>
+          </motion.button>
           <motion.button
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.5 }}
             whileTap={{ scale: 0.95 }}
             onClick={() => setShowFavoritesOnly(!showFavoritesOnly)}
-            className={`flex items-center gap-2 rounded-2xl backdrop-blur-sm px-4 py-2 border flex-shrink-0 transition-all ${
+            className={`flex flex-col items-center gap-1 rounded-2xl backdrop-blur-sm px-3 py-3 border transition-all ${
             showFavoritesOnly ?
-            "bg-primary/25 border-primary/30" :
-            "bg-primary-foreground/12 border-primary-foreground/8"}`
-            }>
-
-            <div className="h-6 w-6 rounded-lg gradient-red flex items-center justify-center">
-              <Heart className={`h-3 w-3 ${showFavoritesOnly ? "fill-primary-foreground text-primary-foreground" : "text-primary-foreground"}`} />
+            "bg-primary-foreground/30 border-primary-foreground/20 shadow-sm" :
+            "bg-primary-foreground/15 border-primary-foreground/10"}`}>
+            <div className="h-8 w-8 rounded-xl gradient-red flex items-center justify-center shadow-sm">
+              <Heart className={`h-4 w-4 ${showFavoritesOnly ? "fill-primary-foreground text-primary-foreground" : "text-primary-foreground"}`} />
             </div>
-            <div>
-              <span className="text-[13px] font-bold text-primary-foreground">{favCount}</span>
-              <span className="text-[11px] text-primary-foreground/60 ml-1">Saved</span>
-            </div>
+            <span className="text-lg font-extrabold text-primary-foreground leading-none">{favCount}</span>
+            <span className="text-[10px] text-primary-foreground/60 font-semibold">Saved</span>
           </motion.button>
         </div>
       </div>
@@ -283,10 +277,13 @@ const Index = () => {
               </div>
               Upcoming Fiestas
             </h2>
-            <div className="flex items-center gap-1 text-muted-foreground">
-              <span className="text-[11px] font-medium">View all</span>
+            <motion.button
+              whileTap={{ scale: 0.95 }}
+              onClick={() => { setShowFavoritesOnly(false); setActiveCategory("All"); setSearch(""); }}
+              className="flex items-center gap-1 text-primary hover:text-primary/80 transition-colors active:text-primary/60">
+              <span className="text-[11px] font-bold">View all</span>
               <ChevronRight className="h-3.5 w-3.5" />
-            </div>
+            </motion.button>
           </div>
           <div className="flex gap-4 overflow-x-auto px-6 pb-3 snap-x snap-mandatory scrollbar-hide touch-pan-x">
             {featured.map((festival) =>
