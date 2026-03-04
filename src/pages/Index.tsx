@@ -321,7 +321,7 @@ const Index = () => {
           <motion.button
             key={label}
             whileTap={{ scale: 0.93 }}
-            onClick={() => setActiveCategory(label)}
+            onClick={() => { setActiveCategory(label); setShowUpcomingOnly(false); }}
             className={`relative flex flex-col items-center gap-2 rounded-2xl py-3.5 px-2 text-[11px] font-bold font-body transition-all duration-300 overflow-hidden ${
             activeCategory === label ?
             `${gradient} text-primary-foreground shadow-elevated scale-[1.03]` :
